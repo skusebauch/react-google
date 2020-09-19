@@ -45,3 +45,16 @@
   object-fit: contain;
   height: 10rem;
 }
+
+@media only screen and (max-width: 31.25em) {
+  .home__body > img {
+    height: 5.5rem;
+  }
+  .home__headerLeft {
+    display: none;
+  }
+  .home__header {
+    justify-content: flex-end;
+    padding: 2rem;
+  }
+}

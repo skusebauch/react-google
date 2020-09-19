@@ -19,6 +19,7 @@
 
 .search__input > input:focus {
   outline-width: 0;
+  outline: none;
 }
 
 .search__input > .MuiSvgIcon-root {
@@ -53,4 +54,10 @@
 
 .search_buttonsHidden {
   display: none !important;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .search__input {
+    width: 95vw;
+  }
 }
