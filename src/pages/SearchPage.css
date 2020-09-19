@@ -116,7 +116,7 @@
   margin-right: 1rem;
 }
 
-@media only screen and (max-width: 71em) {
+@media only screen and (max-width: 900px) {
   .searchPage__logo {
     display: block;
     height: 3rem;
@@ -153,6 +153,6 @@
 
   .searchPage__resultCount {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 1rem;
   }
 }
