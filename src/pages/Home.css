@@ -22,13 +22,26 @@
   text-decoration: underline;
 }
 
-.home__header--right {
+.home__headerRight {
   display: flex;
   align-items: center;
   min-width: 13vw;
   justify-content: space-between;
 }
 
-.home__header--right > .MuiSvgIcon-root {
+.home__headerRight > .MuiSvgIcon-root {
   margin-right: 2rem;
+  font-size: 2.3rem;
+}
+
+.home__body {
+  flex: 1;
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.home__body > img {
+  object-fit: contain;
+  height: 10rem;
 }
