@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { useStateValue } from "../store/context/stateProvider";
+import * as actionTypes from "../store/actions/actionTypes";
 
 import "./Search.css";
 
@@ -17,6 +19,11 @@ function Search({ hideButtons = false }) {
     e.preventDefault();
     // to debug search hitting with enter
     console.log("You hit search >>", input);
+
+    dispatch({
+      type: actionTypes.SET_SEARCH_QUERY,
+      query: input,
+    });
 
     // todo - something with input
     history.push("/search");

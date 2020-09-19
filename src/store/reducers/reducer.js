@@ -1,9 +1,7 @@
+import * as actionTypes from "../actions/actionTypes";
+
 export const initialState = {
   query: null,
-};
-
-export const actionTypes = {
-  SET_SEARCH_QUERY: "SET_SEARCH_QUERY",
 };
 
 const reducer = (state, action) => {
