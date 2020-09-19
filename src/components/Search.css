@@ -2,12 +2,12 @@
   display: flex;
   align-items: center;
   border: 1px solid lightgray;
-  height: 4rem;
+  height: 4.4rem;
   border-radius: 99rem;
   width: 75vw;
   padding: 1rem 2rem;
   margin: 4rem auto 0 auto;
-  max-width: 56rem;
+  max-width: 58.2rem;
 }
 
 .search__input > input {
@@ -40,6 +40,7 @@
   text-transform: inherit;
   color: #5f6368;
   font-family: inherit;
+  font-size: 1.4rem;
 }
 
 .search__buttons button:hover {
