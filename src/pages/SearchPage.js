@@ -16,14 +16,14 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import ArrowDropDownOutlinedIcon from "@material-ui/icons/ArrowDropDownOutlined";
 
 function SearchPage() {
-  const [{ query }, dispatch] = useStateValue();
+  const [{ query }] = useStateValue();
   // LIVE API CALL
   const { data } = useGoogleSearch(query);
 
   // mock API CALL development purpose
   // const data = Response;
 
-  console.log(data);
+  //console.log(data);
 
   return (
     <div className="searchPage">
@@ -84,14 +84,14 @@ function SearchPage() {
             {data?.queries.request[0].searchTerms}
           </p>
           {data?.items.map((item) => (
-            <div className="searchPage__result">
+            <div key={Math.random()} className="searchPage__result">
               <a className="searchPage__resultTitle--sub" href={item.link}>
                 {item.pagemap?.cse_image?.length > 0 &&
                   item.pagemap?.cse_image[0]?.src && (
                     <img
                       className="searchPage__resultImage"
                       src={item.pagemap?.cse_image[0]?.src}
-                      alt="result-image"
+                      alt="result-thumbnail"
                     />
                   )}
                 {item.displayLink}{" "}

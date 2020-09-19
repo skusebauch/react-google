@@ -30,7 +30,6 @@ function Search({ hideButtons = false }) {
   };
 
   return (
-    // changed "search" to form and assign google search button type="submit" to search with hitting enter as well
     <form className="search">
       <div className="search__input">
         <SearchIcon />
@@ -51,7 +50,6 @@ function Search({ hideButtons = false }) {
           <Button variant="outlined">I'm Feeling Lucky</Button>
         </div>
       ) : (
-        // hide button at UI but keep functionality at css display: none
         <div className="search__buttons">
           <Button
             className="search_buttonsHidden"
