@@ -13,6 +13,7 @@ import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
 import LocalOfferOutlinedIcon from "@material-ui/icons/LocalOfferOutlined";
 import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import ArrowDropDownOutlinedIcon from "@material-ui/icons/ArrowDropDownOutlined";
 
 function SearchPage() {
   const [{ query }, dispatch] = useStateValue();
@@ -74,7 +75,30 @@ function SearchPage() {
           </div>
         </div>
       </div>
-      <div className="searchPage__results"></div>
+
+      {true && (
+        <div className="searchPage__results">
+          <p className="searchPage__resultCount">
+            About {data?.searchInformation.formattedTotalResults} results (
+            {data?.searchInformation.formattedSearchTime} seconds) for{" "}
+            {data?.queries.request[0].searchTerms}
+          </p>
+          {data?.items.map((item) => (
+            <div className="searchPage__result">
+              <a className="searchPage__resultTitle--sub" href={item.link}>
+                {item.displayLink}{" "}
+              </a>
+              <span className="searchPage__resultMenu">
+                <ArrowDropDownOutlinedIcon />
+              </span>
+              <a className="searchPage__resultTitle" href={item.link}>
+                <h2>{item.title}</h2>
+              </a>
+              <p className="searchPage__resultSnippet">{item.snippet}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

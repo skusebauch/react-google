@@ -57,3 +57,54 @@
 .searchPage__item > .MuiSvgIcon-root {
   font-size: 1.6rem;
 }
+
+.searchPage__result {
+  margin-bottom: 2.8rem;
+}
+.searchPage__resultTitle--sub {
+  font-size: 1.4rem;
+  padding-top: 1px;
+  line-height: 1.3;
+  text-decoration: none;
+  color: #202124;
+  margin-right: -3px;
+}
+
+.searchPage__resultTitle {
+  text-decoration: none;
+}
+
+.searchPage__resultTitle:hover {
+  text-decoration: underline;
+}
+.searchPage__resultTitle > h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.3;
+  padding-top: 4px;
+  margin-bottom: 3px;
+}
+
+.searchPage__resultCount {
+  color: #70757a;
+  font-size: 1.4rem;
+  margin-bottom: 2.8rem;
+}
+
+.searchPage__resultMenu {
+  display: inline;
+  font-size: 1.4rem;
+  margin: 0 3px 0 3px;
+  vertical-align: middle;
+}
+
+.searchPage__results {
+  max-width: 65rem;
+  margin-top: 2rem;
+  margin-left: 24rem;
+  margin-bottom: 10rem;
+}
+
+.searchPage__resultSnippet {
+  font-size: 1.4rem;
+}
