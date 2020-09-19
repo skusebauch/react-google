@@ -21,3 +21,39 @@
   margin: unset;
   max-width: unset;
 }
+
+.searchPage__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: grey;
+}
+
+.searchPage__items a {
+  text-decoration: none;
+  color: gray;
+}
+
+.searchPage__itemsLeft,
+.searchPage__itemsRight {
+  display: flex;
+}
+
+.searchPage__itemsRight {
+  margin-left: 8rem;
+}
+
+.searchPage__item {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  font-size: 1.3rem;
+}
+
+.searchPage__item a {
+  margin-left: 0.5rem;
+}
+
+.searchPage__item > .MuiSvgIcon-root {
+  font-size: 1.6rem;
+}

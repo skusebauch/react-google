@@ -63,7 +63,14 @@ function SearchPage() {
                 <Link to="/all">More</Link>
               </div>
             </div>
-            <div className="searchPage__itemsRight"></div>
+            <div className="searchPage__itemsRight">
+              <div className="searchPage__item">
+                <Link to="/all">Settings</Link>
+              </div>
+              <div className="searchPage__item">
+                <Link to="/all">Tools</Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
