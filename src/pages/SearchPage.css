@@ -1,2 +1,23 @@
-.searchPage {
+.searchPage__header {
+  display: flex;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+  padding: 3rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.searchPage__logo {
+  object-fit: contain;
+  height: 5rem;
+  margin-right: 5rem;
+}
+
+.searchPage__headerBody > .search > .search__input {
+  margin-top: 0;
+  width: unset;
+  margin: unset;
+  max-width: unset;
 }
