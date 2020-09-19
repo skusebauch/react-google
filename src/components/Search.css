@@ -56,7 +56,7 @@
   display: none !important;
 }
 
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 71em) {
   .search__input {
     width: 95vw;
   }
