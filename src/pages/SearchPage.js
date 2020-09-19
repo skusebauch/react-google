@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./SearchPage.css";
 import { useStateValue } from "../store/context/stateProvider";
 import useGoogleSearch from "../hooks/useGoogleSearch";
-import Response from "../hooks/response";
+//import Response from "../hooks/response";
 import Search from "../components/Search";
 
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
@@ -18,10 +18,10 @@ import ArrowDropDownOutlinedIcon from "@material-ui/icons/ArrowDropDownOutlined"
 function SearchPage() {
   const [{ query }, dispatch] = useStateValue();
   // LIVE API CALL
-  // const { data } = useGoogleSearch(query);
+  const { data } = useGoogleSearch(query);
 
   // mock API CALL development purpose
-  const data = Response;
+  // const data = Response;
 
   console.log(data);
 
@@ -76,7 +76,7 @@ function SearchPage() {
         </div>
       </div>
 
-      {true && (
+      {query && (
         <div className="searchPage__results">
           <p className="searchPage__resultCount">
             About {data?.searchInformation.formattedTotalResults} results (
@@ -86,6 +86,14 @@ function SearchPage() {
           {data?.items.map((item) => (
             <div className="searchPage__result">
               <a className="searchPage__resultTitle--sub" href={item.link}>
+                {item.pagemap?.cse_image?.length > 0 &&
+                  item.pagemap?.cse_image[0]?.src && (
+                    <img
+                      className="searchPage__resultImage"
+                      src={item.pagemap?.cse_image[0]?.src}
+                      alt="result-image"
+                    />
+                  )}
                 {item.displayLink}{" "}
               </a>
               <span className="searchPage__resultMenu">

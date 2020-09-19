@@ -1,3 +1,4 @@
+// mock API for development purpose
 export default {
   kind: "customsearch#search",
   url: {
