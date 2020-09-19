@@ -18,7 +18,7 @@ function Search({ hideButtons = false }) {
   const search = (e) => {
     e.preventDefault();
     // to debug search hitting with enter
-    console.log("You hit search >>", input);
+    // console.log("You hit search >>", input);
 
     dispatch({
       type: actionTypes.SET_SEARCH_QUERY,
