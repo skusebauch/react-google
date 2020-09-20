@@ -26,7 +26,7 @@ function Search({ hideButtons = false }) {
     });
 
     // todo - something with input
-    history.replace("/search");
+    history.push("/search");
   };
 
   return (
